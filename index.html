@@ -1,0 +1,132 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Insurance</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h1>Protect Your Journey with Confidence</h1>
+            <p>Comprehensive vehicle insurance tailored to your needs, because every mile matters.</p>
+            <button class="cta-button">Get Your Quote</button>
+        </div>
+    </div>
+
+    <!-- Coverage Section -->
+    <section class="coverage">
+        <div class="container">
+            <h2>Coverage That Fits Your Needs</h2>
+            <p class="subtitle">Choose from our range of comprehensive coverage options designed to protect you and your vehicle.</p>
+            
+            <div class="coverage-grid">
+                <div class="coverage-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Comprehensive Coverage</h3>
+                    <p>Protection against theft, vandalism, natural disasters, and more.</p>
+                </div>
+                <div class="coverage-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Liability Coverage</h3>
+                    <p>Coverage for damages or injuries you may cause to others.</p>
+                </div>
+                <div class="coverage-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Flexible Payments</h3>
+                    <p>Customize your payment schedule to fit your budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator -->
+    <section class="quote-calculator">
+        <div class="container">
+            <div class="calculator-card">
+                <h2>Get a Quick Quote</h2>
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label>Vehicle Type</label>
+                        <select id="vehicleType">
+                            <option value="">Select vehicle type</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="truck">Truck</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Vehicle Year</label>
+                        <select id="vehicleYear">
+                            <option value="">Select year</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Calculate Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="subtitle">Have questions? Our team of insurance experts is here to help.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91 98765 4320</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Insurance Ave, City, ST 12345</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>contact@insurance.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');
+            s.type = "module"
+            s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2800690-QX84VV73YK6JPFAN/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+</body>
+</html>
